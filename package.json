@@ -1,0 +1,57 @@
+{
+  "name": "@invictus-codes/nuxt-vuetify",
+  "description": "Add Vuetify 3 to your Nuxt application in seconds.",
+  "version": "0.1.0",
+  "license": "MIT",
+  "type": "module",
+  "sideEffects": false,
+  "main": "./dist/module.cjs",
+  "types": "./dist/types.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/invictus-codes/@invictus-codes/nuxt-vuetify.git"
+  },
+  "bugs": {
+    "url": "https://github.com/invictus-codes/@invictus-codes/nuxt-vuetify/issues"
+  },
+  "packageManager": "pnpm@7.20.0",
+  "engines": {
+    "node": "^18.10.0",
+    "pnpm": "^7.20.0"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/types.d.ts",
+      "import": "./dist/module.mjs",
+      "require": "./dist/module.cjs"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "prepack": "nuxt-module-build",
+    "dev": "nuxi dev playground",
+    "dev:build": "nuxi build playground",
+    "dev:prepare": "nuxt-module-build --stub && nuxi prepare playground",
+    "release": "pnpm run lint && pnpm run test && pnpm run prepack && changelogen --release && pnpm publish && git push --follow-tags",
+    "lint": "eslint .",
+    "test": "vitest run",
+    "test:watch": "vitest watch"
+  },
+  "dependencies": {
+    "@nuxt/kit": "^3.2.0",
+    "typescript": "^4.9.5"
+  },
+  "devDependencies": {
+    "@nuxt/eslint-config": "^0.1.1",
+    "@nuxt/module-builder": "latest",
+    "@nuxt/schema": "^3.2.0",
+    "@nuxt/test-utils": "^3.2.0",
+    "changelogen": "^0.4.1",
+    "eslint": "^8.34.0",
+    "nuxt": "^3.2.0",
+    "vitest": "^0.28.4",
+    "vuetify": "^3.1.4"
+  }
+}
