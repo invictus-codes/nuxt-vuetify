@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## v0.1.5
+
+
+### 🚀 Enhancements
+
+  - Add mdi icons (default) (08f9c22)
+
+### ❤️  Contributors
+
+- Jens Van Hellemondt <jens.vanhellemondt@gmail.com>
+
 ## v0.1.4
 
 ## v0.1.3
