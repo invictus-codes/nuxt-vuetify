@@ -1,15 +1,24 @@
 import { defineNuxtPlugin, useRuntimeConfig } from '#app'
-import { createVuetify } from 'vuetify'
-import * as components from 'vuetify/components'
-import * as directives from 'vuetify/directives'
+import { createVuetify, VuetifyOptions } from 'vuetify'
 
-export default defineNuxtPlugin((nuxtApp) => {
+export default defineNuxtPlugin(async (nuxtApp) => {
   const runtimeConfig = useRuntimeConfig()
+  const {
+    treeshaking,
+    ...vuetifyConfig
+  } = runtimeConfig.public.vuetify
+
+  let components: VuetifyOptions['components']
+  let directives: VuetifyOptions['directives']
+  if (!treeshaking) {
+    components = await import('vuetify/components')
+    directives = await import('vuetify/directives')
+  }
 
   const vuetify = createVuetify({
     components,
     directives,
-    ...runtimeConfig.public.vuetify
+    ...vuetifyConfig
   })
 
   // Register Vuetify to Vue

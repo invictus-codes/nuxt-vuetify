@@ -1,19 +1,25 @@
 import { addPlugin, createResolver, defineNuxtModule, getNuxtVersion, isNuxt3, useLogger } from '@nuxt/kit'
-import { VuetifyOptions } from 'vuetify/lib/framework.mjs'
+import defu from 'defu'
+import { VuetifyOptions } from 'vuetify'
+import { Plugin } from 'vite'
 import { name, version } from '../package.json'
 
+const CONFIG_KEY = 'vuetify'
 const logger = useLogger('nuxt:vuetify')
 
 export interface ModuleOptions extends VuetifyOptions {
+  treeshaking: boolean
 }
 
 export default defineNuxtModule<ModuleOptions>({
   // Default configuration options of the Nuxt module
-  defaults: {},
+  defaults: {
+    treeshaking: false
+  },
   meta: {
     name,
     version,
-    configKey: 'vuetify',
+    configKey: CONFIG_KEY,
     compatibility: {
       nuxt: '^3.0.0'
     }
@@ -29,11 +35,20 @@ export default defineNuxtModule<ModuleOptions>({
     nuxt.options.runtimeConfig.public.vuetify = options
 
     nuxt.options.build.transpile.push(runtimeDir)
-    nuxt.options.build.transpile.push('vuetify')
+    nuxt.options.build.transpile.push(CONFIG_KEY)
 
     nuxt.options.css ??= []
     nuxt.options.css.push('vuetify/styles')
     nuxt.options.css.push('@mdi/font/css/materialdesignicons.css')
+
+    if (options.treeshaking) {
+      nuxt.hook('vite:extendConfig', async (config) => {
+        config.optimizeDeps = defu(config.optimizeDeps, { exclude: ['vuetify'] })
+        const vuetify = await import('vite-plugin-vuetify') as unknown as () => Plugin[]
+        config.plugins ??= []
+        config.plugins.push(vuetify())
+      })
+    }
 
     // Do not add the extension since the `.ts` will be transpiled to `.mjs` after `npm run prepack`
     addPlugin(resolver.resolve(runtimeDir, 'plugin'))

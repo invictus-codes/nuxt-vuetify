@@ -1,6 +1,7 @@
 export default defineNuxtConfig({
   modules: ['../src/module'],
   vuetify: {
-    ssr: process.server
+    ssr: process.server,
+    treeshaking: true
   }
 })
