@@ -1,7 +1,7 @@
 export default defineNuxtConfig({
-  modules: ['../src/module'],
+  modules: ['@invictus.codes/nuxt-vuetify'],
+  ssr: true,
   vuetify: {
-    ssr: process.server,
     treeshaking: true
   }
 })

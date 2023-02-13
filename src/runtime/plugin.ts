@@ -5,7 +5,7 @@ export default defineNuxtPlugin(async (nuxtApp) => {
   const runtimeConfig = useRuntimeConfig()
   const {
     treeshaking,
-    ...vuetifyConfig
+    ...options
   } = runtimeConfig.public.vuetify
 
   let components: VuetifyOptions['components']
@@ -18,7 +18,7 @@ export default defineNuxtPlugin(async (nuxtApp) => {
   const vuetify = createVuetify({
     components,
     directives,
-    ...vuetifyConfig
+    ...options
   })
 
   // Register Vuetify to Vue

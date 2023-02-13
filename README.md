@@ -56,7 +56,6 @@ export default defineNuxtConfig({
     /* vite-plugin-vuetify options */
     // only available if treeshaking is enabled:
     autoImport: true | false,
-    // only available if treeshaking is enabled:
     styles: true | 'none' | 'expose' | 'sass' | { configFile: string },
   }
 })
