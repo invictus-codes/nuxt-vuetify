@@ -2,6 +2,24 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## v0.2.2
+
+
+### 🚀 Enhancements
+
+  - Link @invictus.codes/nuxt-vuetify (073dc95)
+  - Add sass to the module (6dc0baf)
+  - Add (css) styles property to options (72b730e)
+
+### 💅 Refactors
+
+  - Apply nuxt branding (bd1ed8b)
+  - Lint with @antfu/eslint-config-ts (e523461)
+
+### ❤️  Contributors
+
+- Jens Van Hellemondt <jens.vanhellemondt@gmail.com>
+
 ## v0.2.1
 
 
