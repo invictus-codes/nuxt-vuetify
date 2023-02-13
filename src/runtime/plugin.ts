@@ -26,6 +26,6 @@ export default defineNuxtPlugin(async (nuxtApp) => {
 
   if (!process.server) {
     // eslint-disable-next-line no-console
-    console.log('❤️ Initialized Vuetify 3', vuetify)
+    console.log('💚 Initialized Vuetify 3', vuetify)
   }
 })
