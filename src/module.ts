@@ -31,6 +31,7 @@ export default defineNuxtModule<ModuleOptions>({
 
     nuxt.options.css ??= [];
     nuxt.options.css.push('vuetify/styles')
+    nuxt.options.css.push('@mdi/font/css/materialdesignicons.css')
 
     // Do not add the extension since the `.ts` will be transpiled to `.mjs` after `npm run prepack`
     addPlugin(resolver.resolve(runtimeDir, 'plugin'))

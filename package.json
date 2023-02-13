@@ -44,6 +44,7 @@
     "@nuxt/kit": "^3.2.0"
   },
   "devDependencies": {
+    "@mdi/font": "^7.1.96",
     "@nuxt/eslint-config": "^0.1.1",
     "@nuxt/module-builder": "latest",
     "@nuxt/schema": "^3.2.0",
@@ -51,8 +52,8 @@
     "changelogen": "^0.4.1",
     "eslint": "^8.34.0",
     "nuxt": "^3.2.0",
+    "typescript": "^4.9.5",
     "vitest": "^0.28.4",
-    "vuetify": "^3.1.4",
-    "typescript": "^4.9.5"
+    "vuetify": "^3.1.4"
   }
 }
