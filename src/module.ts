@@ -26,6 +26,8 @@ export default defineNuxtModule<ModuleOptions>({
     const resolver = createResolver(import.meta.url)
     const runtimeDir = resolver.resolve('./runtime')
 
+    nuxt.options.runtimeConfig.public.vuetify = options
+
     nuxt.options.build.transpile.push(runtimeDir)
     nuxt.options.build.transpile.push('vuetify')
 
