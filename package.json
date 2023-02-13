@@ -1,8 +1,8 @@
 {
-  "name": "@invictus-codes/nuxt-vuetify",
+  "name": "@invictus.codes/nuxt-vuetify",
   "description": "Add Vuetify 3 to your Nuxt application in seconds.",
   "private": false,
-  "version": "0.1.3",
+  "version": "0.1.4",
   "license": "MIT",
   "type": "module",
   "sideEffects": false,
@@ -10,10 +10,10 @@
   "types": "./dist/types.d.ts",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/invictus-codes/@invictus-codes/nuxt-vuetify.git"
+    "url": "git+https://github.com/invictus-codes/nuxt-vuetify.git"
   },
   "bugs": {
-    "url": "https://github.com/invictus-codes/@invictus-codes/nuxt-vuetify/issues"
+    "url": "https://github.com/invictus-codes/nuxt-vuetify/issues"
   },
   "packageManager": "pnpm@7.20.0",
   "engines": {

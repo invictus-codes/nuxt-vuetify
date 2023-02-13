@@ -3,7 +3,7 @@ Get your module up and running quickly.
 
 Find and replace all on all files (CMD+SHIFT+F):
 - Name: Nuxt Vuetify
-- Package name: @invictus-codes/nuxt-vuetify
+- Package name: @invictus.codes/nuxt-vuetify
 - Description: Add Vuetify 3 to your Nuxt application in seconds.
 -->
 
@@ -25,25 +25,25 @@ Find and replace all on all files (CMD+SHIFT+F):
 
 ## Quick Setup
 
-1. Add `@invictus-codes/nuxt-vuetify` dependency to your project
+1. Add `@invictus.codes/nuxt-vuetify` dependency to your project
 
 ```bash
 # Using pnpm
-pnpm add -D @invictus-codes/nuxt-vuetify
+pnpm add -D @invictus.codes/nuxt-vuetify
 
 # Using yarn
-yarn add --dev @invictus-codes/nuxt-vuetify
+yarn add --dev @invictus.codes/nuxt-vuetify
 
 # Using npm
-npm install --save-dev @invictus-codes/nuxt-vuetify
+npm install --save-dev @invictus.codes/nuxt-vuetify
 ```
 
-2. Add `@invictus-codes/nuxt-vuetify` to the `modules` section of `nuxt.config.ts`
+2. Add `@invictus.codes/nuxt-vuetify` to the `modules` section of `nuxt.config.ts`
 
 ```js
 export default defineNuxtConfig({
   modules: [
-    '@invictus-codes/nuxt-vuetify'
+    '@invictus.codes/nuxt-vuetify'
   ]
 })
 ```
@@ -83,11 +83,11 @@ npm run release
 Copyright (c) Invictus.codes
 
 <!-- Badges -->
-[npm-version-src]: https://img.shields.io/npm/v/@invictus-codes/nuxt-vuetify/latest.svg?style=flat&colorA=18181B&colorB=28CF8D
-[npm-version-href]: https://npmjs.com/package/@invictus-codes/nuxt-vuetify
+[npm-version-src]: https://img.shields.io/npm/v/@invictus.codes/nuxt-vuetify/latest.svg?style=flat&colorA=18181B&colorB=28CF8D
+[npm-version-href]: https://npmjs.com/package/@invictus.codes/nuxt-vuetify
 
-[npm-downloads-src]: https://img.shields.io/npm/dm/@invictus-codes/nuxt-vuetify.svg?style=flat&colorA=18181B&colorB=28CF8D
-[npm-downloads-href]: https://npmjs.com/package/@invictus-codes/nuxt-vuetify
+[npm-downloads-src]: https://img.shields.io/npm/dm/@invictus.codes/nuxt-vuetify.svg?style=flat&colorA=18181B&colorB=28CF8D
+[npm-downloads-href]: https://npmjs.com/package/@invictus.codes/nuxt-vuetify
 
-[license-src]: https://img.shields.io/npm/l/@invictus-codes/nuxt-vuetify.svg?style=flat&colorA=18181B&colorB=28CF8D
-[license-href]: https://npmjs.com/package/@invictus-codes/nuxt-vuetify
+[license-src]: https://img.shields.io/npm/l/@invictus.codes/nuxt-vuetify.svg?style=flat&colorA=18181B&colorB=28CF8D
+[license-href]: https://npmjs.com/package/@invictus.codes/nuxt-vuetify
