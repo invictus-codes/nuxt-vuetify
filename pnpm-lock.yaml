@@ -15,7 +15,6 @@ specifiers:
 
 dependencies:
   '@nuxt/kit': 3.2.0
-  typescript: 4.9.5
 
 devDependencies:
   '@nuxt/eslint-config': 0.1.1_eslint@8.34.0
@@ -25,6 +24,7 @@ devDependencies:
   changelogen: 0.4.1
   eslint: 8.34.0
   nuxt: 3.2.0_7kw3g6rralp5ps6mg3uyzz6azm
+  typescript: 4.9.5
   vitest: 0.28.4
   vuetify: 3.1.4
 
@@ -5191,6 +5191,7 @@ packages:
     resolution: {integrity: sha512-1FXk9E2Hm+QzZQ7z+McJiHL4NW1F2EzMu9Nq9i3zAaGqibafqYwCVU6WyWAuyQRRzOlxou8xZSyXLEN8oKj24g==}
     engines: {node: '>=4.2.0'}
     hasBin: true
+    dev: true
 
   /ufo/1.0.1:
     resolution: {integrity: sha512-boAm74ubXHY7KJQZLlXrtMz52qFvpsbOxDcZOnw/Wf+LS4Mmyu7JxmzD4tDLtUQtmZECypJ0FrCz4QIe6dvKRA==}
