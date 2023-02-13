@@ -1,6 +1,7 @@
 lockfileVersion: 5.4
 
 specifiers:
+  '@invictus.codes/nuxt-vuetify': link:.
   '@mdi/font': ^7.0.96
   '@nuxt/kit': ^3.2.0
   '@nuxt/module-builder': latest
@@ -17,6 +18,7 @@ specifiers:
   vuetify: ^3.1.4
 
 dependencies:
+  '@invictus.codes/nuxt-vuetify': 'link:'
   '@mdi/font': 7.1.96
   '@nuxt/kit': 3.2.0
   defu: 6.1.2
