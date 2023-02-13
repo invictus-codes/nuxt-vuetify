@@ -1,7 +1,7 @@
 {
   "name": "@invictus-codes/nuxt-vuetify",
   "description": "Add Vuetify 3 to your Nuxt application in seconds.",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "license": "MIT",
   "type": "module",
   "sideEffects": false,
