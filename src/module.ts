@@ -1,18 +1,18 @@
 import { addPlugin, createResolver, defineNuxtModule, getNuxtVersion, isNuxt3, useLogger } from '@nuxt/kit'
 import defu from 'defu'
 import vuetify from 'vite-plugin-vuetify'
-import { VuetifyOptions } from 'vuetify'
+import type { VuetifyOptions } from 'vuetify'
 import { name, version } from '../package.json'
 
 const CONFIG_KEY = 'vuetify'
 const logger = useLogger('nuxt:vuetify')
 
 export interface ModuleOptions extends VuetifyOptions {
-  treeshaking?: boolean;
-  autoImport?: boolean;
+  treeshaking?: boolean
+  autoImport?: boolean
   styles?: true | 'none' | 'expose' | 'sass' | {
-    configFile: string;
-  };
+    configFile: string
+  }
 }
 
 export default defineNuxtModule<ModuleOptions>({
@@ -20,29 +20,29 @@ export default defineNuxtModule<ModuleOptions>({
   defaults: {
     treeshaking: false,
     styles: true,
-    autoImport: true
+    autoImport: true,
   },
   meta: {
     name,
     version,
     configKey: CONFIG_KEY,
     compatibility: {
-      nuxt: '^3.0.0'
-    }
+      nuxt: '^3.0.0',
+    },
   },
-  setup ({
+  setup({
     styles,
     autoImport,
     ..._options
   }, nuxt) {
-    if (!isNuxt3(nuxt)) {
+    if (!isNuxt3(nuxt))
       logger.error(`Cannot support nuxt version: ${getNuxtVersion(nuxt)}`)
-    }
+
     const isSSR = nuxt.options.ssr
     const options = defu(_options, { ssr: isSSR })
 
     nuxt.options.css ??= []
-    // @ts-ignore public.vuetify doesn't include VuetifyOptions
+    // @ts-expect-error public.vuetify doesn't include VuetifyOptions
     nuxt.options.runtimeConfig.public.vuetify = options
 
     // Module: Transpile the runtime and vuetify package
@@ -54,11 +54,10 @@ export default defineNuxtModule<ModuleOptions>({
     // Vuetify: add vuetify styles to the nuxtApp css
     // @TODO: this is not SSR friendly (styles are added twice.
     //        also can't do this in plugin, as rollup then injects the styles
-    if (typeof styles === 'string' && ['sass', 'expose'].includes(styles)) {
+    if (typeof styles === 'string' && ['sass', 'expose'].includes(styles))
       nuxt.options.css.unshift('vuetify/styles/main.sass')
-    } else if (styles === true || typeof styles === 'object') {
+    else if (styles === true || typeof styles === 'object')
       nuxt.options.css.unshift('vuetify/styles')
-    }
 
     // Vuetify: default icons css
     nuxt.options.css.push('@mdi/font/css/materialdesignicons.css')
@@ -72,19 +71,19 @@ export default defineNuxtModule<ModuleOptions>({
           ...(Array.isArray(config.plugins) ? config.plugins : []),
           vuetify({
             styles,
-            autoImport
-          })
+            autoImport,
+          }),
         ]
       }
 
       config.ssr ||= {}
       config.ssr.noExternal = [
         ...(Array.isArray(config.ssr.noExternal) ? config.ssr.noExternal : []),
-        CONFIG_KEY
+        CONFIG_KEY,
       ]
     })
 
     // Do not add the extension since the `.ts` will be transpiled to `.mjs` after `npm run prepack`
     addPlugin(resolver.resolve(runtimeDir, 'plugin'))
-  }
+  },
 })

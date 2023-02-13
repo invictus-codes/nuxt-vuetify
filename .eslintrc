@@ -1,7 +1,7 @@
 {
   "root": true,
   "extends": [
-    "@nuxtjs/eslint-config-typescript"
+    "@antfu/eslint-config-ts"
   ],
   "rules": {
     "import/no-named-as-default": 0

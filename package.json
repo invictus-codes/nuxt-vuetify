@@ -39,7 +39,8 @@
     "dev:build": "nuxi build playground",
     "dev:prepare": "nuxt-module-build --stub && nuxi prepare playground",
     "release": "pnpm run lint && pnpm run test && pnpm run prepack && changelogen --release && pnpm publish && git push --follow-tags",
-    "lint": "eslint .",
+    "lint": "eslint ./src --ext .js,.jsx,.ts,.tsx,.vue --ignore-path .gitignore --cache",
+    "lint:fix": "npm run lint -- --fix",
     "test": "vitest run",
     "test:watch": "vitest watch"
   },
@@ -52,6 +53,7 @@
     "vuetify": "^3.1.4"
   },
   "devDependencies": {
+    "@antfu/eslint-config-ts": "^0.35.2",
     "@mdi/font": "^7.1.96",
     "@nuxt/module-builder": "latest",
     "@nuxt/schema": "^3.2.0",

@@ -49,14 +49,14 @@ export default defineNuxtConfig({
   vuetify: {
     /* vuetify options */
     // @TODO: list all vuetify options
-    
+
     /* nuxt-vuetify module options */
-    treeshaking: true | false, 
-      
+    treeshaking: true | false,
+
     /* vite-plugin-vuetify options */
     // only available if treeshaking is enabled:
     autoImport: true | false,
-    styles: true | 'none' | 'expose' | 'sass' | { configFile: string },
+    styles: true | 'none' | 'expose' | 'sass' | { configFile: string }
   }
 })
 ```

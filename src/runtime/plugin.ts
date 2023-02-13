@@ -1,5 +1,6 @@
+import type { VuetifyOptions } from 'vuetify'
+import { createVuetify } from 'vuetify'
 import { defineNuxtPlugin, useRuntimeConfig } from '#app'
-import { createVuetify, VuetifyOptions } from 'vuetify'
 
 export default defineNuxtPlugin(async (nuxtApp) => {
   const runtimeConfig = useRuntimeConfig()
@@ -18,7 +19,7 @@ export default defineNuxtPlugin(async (nuxtApp) => {
   const vuetify = createVuetify({
     components,
     directives,
-    ...options
+    ...options,
   })
 
   // Register Vuetify to Vue
