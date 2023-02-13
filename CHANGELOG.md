@@ -2,6 +2,22 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## v0.1.6
+
+
+### 🚀 Enhancements
+
+  - Add vuetify options types (e5a341d)
+  - Provide vuetify config options to plugin (34a3a35)
+
+### 💅 Refactors
+
+  - Lint (8c3c610)
+
+### ❤️  Contributors
+
+- Jens Van Hellemondt <jens.vanhellemondt@gmail.com>
+
 ## v0.1.5
 
 
