@@ -1,11 +1,11 @@
-import {addPlugin, createResolver, defineNuxtModule, getNuxtVersion, isNuxt3, useLogger} from '@nuxt/kit'
-import {name, version} from '../package.json'
-
-// Module options TypeScript interface definition
-export interface ModuleOptions {
-}
+import { addPlugin, createResolver, defineNuxtModule, getNuxtVersion, isNuxt3, useLogger } from '@nuxt/kit'
+import { VuetifyOptions } from 'vuetify/lib/framework.mjs'
+import { name, version } from '../package.json'
 
 const logger = useLogger('nuxt:vuetify')
+
+export interface ModuleOptions extends VuetifyOptions {
+}
 
 export default defineNuxtModule<ModuleOptions>({
   // Default configuration options of the Nuxt module
@@ -18,7 +18,7 @@ export default defineNuxtModule<ModuleOptions>({
       nuxt: '^3.0.0'
     }
   },
-  async setup(options, nuxt) {
+  setup (options, nuxt) {
     if (!isNuxt3(nuxt)) {
       logger.error(`Cannot support nuxt version: ${getNuxtVersion(nuxt)}`)
     }
@@ -29,7 +29,7 @@ export default defineNuxtModule<ModuleOptions>({
     nuxt.options.build.transpile.push(runtimeDir)
     nuxt.options.build.transpile.push('vuetify')
 
-    nuxt.options.css ??= [];
+    nuxt.options.css ??= []
     nuxt.options.css.push('vuetify/styles')
     nuxt.options.css.push('@mdi/font/css/materialdesignicons.css')
 

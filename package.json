@@ -20,6 +20,9 @@
     "node": "^18.10.0",
     "pnpm": "^7.20.0"
   },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
+  },
   "exports": {
     ".": {
       "types": "./dist/types.d.ts",
@@ -35,25 +38,26 @@
     "dev": "nuxi dev playground",
     "dev:build": "nuxi build playground",
     "dev:prepare": "nuxt-module-build --stub && nuxi prepare playground",
-    "release": "pnpm run lint && pnpm run test && pnpm run prepack && changelogen --release && pnpm publish --access public && git push --follow-tags",
+    "release": "pnpm run lint && pnpm run test && pnpm run prepack && changelogen --release && pnpm publish && git push --follow-tags",
     "lint": "eslint .",
     "test": "vitest run",
     "test:watch": "vitest watch"
   },
   "dependencies": {
-    "@nuxt/kit": "^3.2.0"
+    "@nuxt/kit": "^3.2.0",
+    "@mdi/font": "^7.0.96",
+    "vuetify": "^3.1.4"
   },
   "devDependencies": {
     "@mdi/font": "^7.1.96",
-    "@nuxt/eslint-config": "^0.1.1",
     "@nuxt/module-builder": "latest",
+    "@nuxtjs/eslint-config-typescript": "^12.0.0",
     "@nuxt/schema": "^3.2.0",
     "@nuxt/test-utils": "^3.2.0",
     "changelogen": "^0.4.1",
     "eslint": "^8.34.0",
     "nuxt": "^3.2.0",
     "typescript": "^4.9.5",
-    "vitest": "^0.28.4",
-    "vuetify": "^3.1.4"
+    "vitest": "^0.28.4"
   }
 }
