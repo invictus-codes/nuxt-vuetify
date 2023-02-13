@@ -2,12 +2,13 @@ import { addPlugin, createResolver, defineNuxtModule, getNuxtVersion, isNuxt3, u
 import defu from 'defu'
 import { VuetifyOptions } from 'vuetify'
 import { Plugin } from 'vite'
+import { Options as viteVuetifyOptions } from '@vuetify/loader-shared'
 import { name, version } from '../package.json'
 
 const CONFIG_KEY = 'vuetify'
 const logger = useLogger('nuxt:vuetify')
 
-export interface ModuleOptions extends VuetifyOptions {
+export interface ModuleOptions extends VuetifyOptions, viteVuetifyOptions {
   treeshaking: boolean
 }
 

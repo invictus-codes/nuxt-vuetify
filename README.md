@@ -21,7 +21,8 @@ Find and replace all on all files (CMD+SHIFT+F):
 ## Features
 
 <!-- Highlight some of the features your module provide here -->
-- 👌&nbsp;Zero configuration to start
+- 👌 &nbsp;Zero configuration to start
+- 🌳 &nbsp;Treeshaking built-in (vite, off by default)
 
 ## Quick Setup
 
@@ -44,7 +45,20 @@ npm install --save-dev @invictus.codes/nuxt-vuetify
 export default defineNuxtConfig({
   modules: [
     '@invictus.codes/nuxt-vuetify'
-  ]
+  ],
+  vuetify: {
+    /* vuetify options */
+    // @TODO: list all vuetify options
+    
+    /* nuxt-vuetify module options */
+    treeshaking: true | false, 
+      
+    /* vite-plugin-vuetify options */
+    // only available if treeshaking is enabled:
+    autoImport: true | false,
+    // only available if treeshaking is enabled:
+    styles: true | 'none' | 'expose' | 'sass' | { configFile: string },
+  }
 })
 ```
 
