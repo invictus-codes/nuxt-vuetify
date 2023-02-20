@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## v0.2.3
+
+
+### 🚀 Enhancements
+
+  - Accept mdi, md and fa as iconfont and use cdn by default (6c3c942)
+
+### 📖 Documentation
+
+  - Update with module and vite-plugin options (b52957b)
+
+### ❤️  Contributors
+
+- Jens Van Hellemondt <jens.vanhellemondt@gmail.com>
+
 ## v0.2.2
 
 
