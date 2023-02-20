@@ -3,7 +3,6 @@ lockfileVersion: 5.4
 specifiers:
   '@antfu/eslint-config-ts': ^0.35.2
   '@invictus.codes/nuxt-vuetify': link:.
-  '@mdi/font': ^7.0.96
   '@nuxt/kit': ^3.2.0
   '@nuxt/module-builder': latest
   '@nuxt/schema': ^3.2.0
@@ -21,7 +20,6 @@ specifiers:
 
 dependencies:
   '@invictus.codes/nuxt-vuetify': 'link:'
-  '@mdi/font': 7.1.96
   '@nuxt/kit': 3.2.0
   defu: 6.1.2
   vite-plugin-vuetify: 1.0.2_vuetify@3.1.4
@@ -883,10 +881,6 @@ packages:
       - encoding
       - supports-color
     dev: true
-
-  /@mdi/font/7.1.96:
-    resolution: {integrity: sha512-Imag6npmfkBDi2Ze2jiZVAPTDIKLxhz2Sx82xJ2zctyAU5LYJejLI5ChnDwiD9bMkQfVuzEsI98Q8toHyC+HCg==}
-    dev: false
 
   /@netlify/functions/1.4.0:
     resolution: {integrity: sha512-gy7ULTIRroc2/jyFVGx1djCmmBMVisIwrvkqggq5B6iDcInRSy2Tpkm+V5C63hKJVkNRskKWtLQKm9ecCaQTjA==}
