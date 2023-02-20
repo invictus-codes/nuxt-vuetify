@@ -16,11 +16,13 @@ Find and replace all on all files (CMD+SHIFT+F):
 > Add Vuetify 3 to your Nuxt application in seconds.
 
 - [✨ &nbsp;Release Notes](/CHANGELOG.md)
+
 <!-- - [📖 &nbsp;Documentation](https://example.com) -->
 
 ## Features
 
 <!-- Highlight some of the features your module provide here -->
+
 - 👌 &nbsp;Zero configuration to start
 - 🌳 &nbsp;Treeshaking built-in (vite, off by default)
 
@@ -52,16 +54,25 @@ export default defineNuxtConfig({
 
     /* nuxt-vuetify module options */
     treeshaking: true | false,
+    useIconCDN: true | false,
 
     /* vite-plugin-vuetify options */
-    // only available if treeshaking is enabled:
+    styles: true | 'none' | 'expose' | 'sass' | { configFile: string },
     autoImport: true | false,
-    styles: true | 'none' | 'expose' | 'sass' | { configFile: string }
   }
 })
 ```
 
 That's it! You can now use Nuxt Vuetify in your Nuxt app ✨
+
+## Nuxt-Vuetify options
+
+| Property name | Accepted values                                        | Description                                                                                                                                                                                                       | Default | Origin                                                                                                                                                                                 |
+|---------------|--------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| treeshaking   | true, false                                            | Treeshaking enables you to drastically lower your build size by only including the components you actually use in the final bundle                                                                                | false   | Module                                                                                                                                                                                 |
+| useIconCDN    | true, false                                            | Use a CDN to load the icons (only available for defaultSet '**mdi**', '**md**' and '**fa**')                                                                                                                      | true    | Module                                                                                                                                                                                 |
+| styles        | true, 'none', 'expose', 'sass', { configFile: string } | - true: precompiled vuetify css<br/>- none: no styles are loaded<br/>- sass: sass styles are used<br/>- expose: sass styles are used<br/>- { configFile: '<your sass/scss-file here>' }: use your own styles file | true    | [Vuetify sass variables](https://vuetifyjs.com/en/features/sass-variables/)<br/><br/>[vite-plugin-vuetify](https://github.com/vuetifyjs/vuetify-loader/tree/next/packages/vite-plugin) |
+| autoImport    | true, false                                            | Auto imports the Vuetify components (only available with treeshaking)                                                                                                                                             | true    | [Nuxt 3 auto imports](https://nuxt.com/docs/guide/concepts/auto-imports)<br/><br/>[vite-plugin-vuetify](https://github.com/vuetifyjs/vuetify-loader/tree/next/packages/vite-plugin)    |
 
 ## Development
 
@@ -96,11 +107,15 @@ npm run release
 Copyright (c) Invictus.codes
 
 <!-- Badges -->
+
 [npm-version-src]: https://img.shields.io/npm/v/@invictus.codes/nuxt-vuetify/latest.svg?style=flat&colorA=18181B&colorB=28CF8D
+
 [npm-version-href]: https://npmjs.com/package/@invictus.codes/nuxt-vuetify
 
 [npm-downloads-src]: https://img.shields.io/npm/dm/@invictus.codes/nuxt-vuetify.svg?style=flat&colorA=18181B&colorB=28CF8D
+
 [npm-downloads-href]: https://npmjs.com/package/@invictus.codes/nuxt-vuetify
 
 [license-src]: https://img.shields.io/npm/l/@invictus.codes/nuxt-vuetify.svg?style=flat&colorA=18181B&colorB=28CF8D
+
 [license-href]: https://npmjs.com/package/@invictus.codes/nuxt-vuetify
