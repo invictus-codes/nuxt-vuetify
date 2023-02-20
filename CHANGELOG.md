@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## v0.2.4
+
+
+### 🚀 Enhancements
+
+  - Add styles.configFile support (dfda385)
+
+### 📖 Documentation
+
+  - List more features and add icons to options (74c8bae)
+
+### ❤️  Contributors
+
+- Jens Van Hellemondt <jens.vanhellemondt@gmail.com>
+
 ## v0.2.3
 
 
