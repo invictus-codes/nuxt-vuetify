@@ -63,6 +63,8 @@ export default defineNuxtModule<ModuleOptions>({
       nuxt.options.css.unshift('vuetify/styles/main.sass')
     } else if (styles === true) {
       nuxt.options.css.unshift('vuetify/styles')
+    } else if (!options.treeshaking && typeof styles === 'object' && styles?.configFile && typeof styles.configFile === 'string') {
+      nuxt.options.css.unshift(styles.configFile)
     }
 
     // Icon CDN's
