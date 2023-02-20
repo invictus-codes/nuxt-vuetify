@@ -39,8 +39,9 @@ export default defineNuxtModule<ModuleOptions>({
     autoImport,
     ..._options
   }, nuxt) {
-    if (!isNuxt3(nuxt))
+    if (!isNuxt3(nuxt)) {
       logger.error(`Cannot support nuxt version: ${getNuxtVersion(nuxt)}`)
+    }
 
     const isSSR = nuxt.options.ssr
     const options = defu(_options, { ssr: isSSR })
@@ -58,10 +59,11 @@ export default defineNuxtModule<ModuleOptions>({
     // Vuetify: add vuetify styles to the nuxtApp css
     // @TODO: this is not SSR friendly (styles are added twice.
     //        also can't do this in plugin, as rollup then injects the styles?
-    if (typeof styles === 'string' && ['sass', 'expose'].includes(styles))
+    if (typeof styles === 'string' && ['sass', 'expose'].includes(styles)) {
       nuxt.options.css.unshift('vuetify/styles/main.sass')
-    else if (styles === true || typeof styles === 'object')
+    } else if (styles === true) {
       nuxt.options.css.unshift('vuetify/styles')
+    }
 
     // Icon CDN's
     if (options.useIconCDN) {

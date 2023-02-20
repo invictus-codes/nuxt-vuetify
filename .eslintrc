@@ -4,6 +4,22 @@
     "@antfu/eslint-config-ts"
   ],
   "rules": {
-    "import/no-named-as-default": 0
+    "curly": [
+      "error",
+      "all"
+    ],
+    "import/no-named-as-default": 0,
+    "@typescript-eslint/brace-style": [
+      "error",
+      "1tbs"
+    ],
+    "@typescript-eslint/space-before-function-paren": [
+      "error",
+      {
+        "anonymous": "always",
+        "named": "never",
+        "asyncArrow": "always"
+      }
+    ]
   }
 }
