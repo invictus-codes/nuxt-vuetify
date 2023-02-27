@@ -2,6 +2,27 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## v0.2.5
+
+
+### 🚀 Enhancements
+
+  - Support font-awesome-icon (0da6395)
+
+### 🩹 Fixes
+
+  - Properly set engines (f42524d)
+  - Destructure useIconCDN as it's not a valid Vuetify option (950ddea)
+
+### 💅 Refactors
+
+  - Set proper email address in changelog (25ea294)
+  - Update todo about ssr and styles (95acfa1)
+
+### ❤️  Contributors
+
+- Jens Van Hellemondt <jens@invictus.codes>
+
 ## v0.2.4
 
 
