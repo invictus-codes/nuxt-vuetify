@@ -2,6 +2,8 @@ lockfileVersion: 5.4
 
 specifiers:
   '@antfu/eslint-config-ts': ^0.35.2
+  '@fortawesome/fontawesome-svg-core': ^6.3.0
+  '@fortawesome/vue-fontawesome': ^3.0.3
   '@invictus.codes/nuxt-vuetify': link:.
   '@nuxt/kit': ^3.2.0
   '@nuxt/module-builder': latest
@@ -19,6 +21,8 @@ specifiers:
   vuetify: ^3.1.4
 
 dependencies:
+  '@fortawesome/fontawesome-svg-core': 6.3.0
+  '@fortawesome/vue-fontawesome': 3.0.3_o733sqecwwreo43htppogsmk44
   '@invictus.codes/nuxt-vuetify': 'link:'
   '@nuxt/kit': 3.2.0
   defu: 6.1.2
@@ -800,6 +804,29 @@ packages:
     transitivePeerDependencies:
       - supports-color
     dev: true
+
+  /@fortawesome/fontawesome-common-types/6.3.0:
+    resolution: {integrity: sha512-4BC1NMoacEBzSXRwKjZ/X/gmnbp/HU5Qqat7E8xqorUtBFZS+bwfGH5/wqOC2K6GV0rgEobp3OjGRMa5fK9pFg==, tarball: '@fortawesome/fontawesome-common-types/-/6.3.0/fontawesome-common-types-6.3.0.tgz'}
+    engines: {node: '>=6'}
+    requiresBuild: true
+    dev: false
+
+  /@fortawesome/fontawesome-svg-core/6.3.0:
+    resolution: {integrity: sha512-uz9YifyKlixV6AcKlOX8WNdtF7l6nakGyLYxYaCa823bEBqyj/U2ssqtctO38itNEwXb8/lMzjdoJ+aaJuOdrw==, tarball: '@fortawesome/fontawesome-svg-core/-/6.3.0/fontawesome-svg-core-6.3.0.tgz'}
+    engines: {node: '>=6'}
+    requiresBuild: true
+    dependencies:
+      '@fortawesome/fontawesome-common-types': 6.3.0
+    dev: false
+
+  /@fortawesome/vue-fontawesome/3.0.3_o733sqecwwreo43htppogsmk44:
+    resolution: {integrity: sha512-KCPHi9QemVXGMrfuwf3nNnNo129resAIQWut9QTAMXmXqL2ErABC6ohd2yY5Ipq0CLWNbKHk8TMdTXL/Zf3ZhA==, tarball: '@fortawesome/vue-fontawesome/-/3.0.3/vue-fontawesome-3.0.3.tgz'}
+    peerDependencies:
+      '@fortawesome/fontawesome-svg-core': ~1 || ~6
+      vue: '>= 3.0.0 < 4'
+    dependencies:
+      '@fortawesome/fontawesome-svg-core': 6.3.0
+    dev: false
 
   /@humanwhocodes/config-array/0.11.8:
     resolution: {integrity: sha512-UybHIJzJnR5Qc/MsD9Kr+RpO2h+/P1GhOwdiLPXK5TWk5sgTdu88bTD9UP+CKbPPh5Rni1u0GjAdYQLemG8g+g==}

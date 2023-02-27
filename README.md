@@ -53,15 +53,19 @@ export default defineNuxtConfig({
   ],
   vuetify: {
     /* vuetify options */
-    // @TODO: list all vuetify options
+    vuetifyOptions: {
+      // @TODO: list all vuetify options
+    },
 
-    /* nuxt-vuetify module options */
-    treeshaking: true | false,
-    useIconCDN: true | false,
+    moduleOptions: {
+      /* nuxt-vuetify module options */
+      treeshaking: true | false,
+      useIconCDN: true | false,
 
-    /* vite-plugin-vuetify options */
-    styles: true | 'none' | 'expose' | 'sass' | { configFile: string },
-    autoImport: true | false,
+      /* vite-plugin-vuetify options */
+      styles: true | 'none' | 'expose' | 'sass' | { configFile: string },
+      autoImport: true | false,
+    }
   }
 })
 ```
@@ -70,13 +74,13 @@ That's it! You can now use Nuxt Vuetify in your Nuxt app ✨
 
 ## Nuxt-Vuetify options
 
-| Property name | Accepted values                                                                                                         | Description                                                                                                                                                                                                       | Default | Origin                                                                                                                                                                                 |
-|---------------|-------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| treeshaking   | true, false                                                                                                             | Treeshaking enables you to drastically lower your build size by only including the components you actually use in the final bundle                                                                                | false   | Module                                                                                                                                                                                 |
-| useIconCDN    | true, false                                                                                                             | Use a CDN to load the icons (only available for defaultSet '**mdi**', '**md**' and '**fa**')                                                                                                                      | true    | Module                                                                                                                                                                                 |
-| styles        | true, <br/>'none', <br/>'expose', <br/>'sass', <br/>{ configFile: string }<br/><br/>Also refer to Vuetify documentation | - true: precompiled vuetify css<br/>- none: no styles are loaded<br/>- sass: sass styles are used<br/>- expose: sass styles are used<br/>- { configFile: '<your sass/scss-file here>' }: use your own styles file | true    | [Vuetify sass variables](https://vuetifyjs.com/en/features/sass-variables/)<br/><br/>[vite-plugin-vuetify](https://github.com/vuetifyjs/vuetify-loader/tree/next/packages/vite-plugin) |
-| autoImport    | true, false                                                                                                             | Auto imports the Vuetify components (only available with treeshaking)                                                                                                                                             | true    | [Nuxt 3 auto imports](https://nuxt.com/docs/guide/concepts/auto-imports)<br/><br/>[vite-plugin-vuetify](https://github.com/vuetifyjs/vuetify-loader/tree/next/packages/vite-plugin)    |
-| icons         | Refer to Vuetify documentation                                                                                          |                                                                                                                                                                                                                   |         | [Vuetify icon fonts](https://vuetifyjs.com/en/features/icon-fonts/)                                                                                                                    |
+| Scope          | Property name | Accepted values                                                                                                         | Description                                                                                                                                                                                                       | Default | Origin                                                                                                                                                                                 |
+|----------------|---------------|-------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| moduleOptions  | treeshaking   | true, false                                                                                                             | Treeshaking enables you to drastically lower your build size by only including the components you actually use in the final bundle                                                                                | false   | Module                                                                                                                                                                                 |
+| moduleOptions  | useIconCDN    | true, false                                                                                                             | Use a CDN to load the icons (only available for defaultSet '**mdi**', '**md**' and '**fa**')                                                                                                                      | true    | Module                                                                                                                                                                                 |
+| moduleOptions  | styles        | true, <br/>'none', <br/>'expose', <br/>'sass', <br/>{ configFile: string }<br/><br/>Also refer to Vuetify documentation | - true: precompiled vuetify css<br/>- none: no styles are loaded<br/>- sass: sass styles are used<br/>- expose: sass styles are used<br/>- { configFile: '<your sass/scss-file here>' }: use your own styles file | true    | [Vuetify sass variables](https://vuetifyjs.com/en/features/sass-variables/)<br/><br/>[vite-plugin-vuetify](https://github.com/vuetifyjs/vuetify-loader/tree/next/packages/vite-plugin) |
+| moduleOptions  | autoImport    | true, false                                                                                                             | Auto imports the Vuetify components (only available with treeshaking)                                                                                                                                             | true    | [Nuxt 3 auto imports](https://nuxt.com/docs/guide/concepts/auto-imports)<br/><br/>[vite-plugin-vuetify](https://github.com/vuetifyjs/vuetify-loader/tree/next/packages/vite-plugin)    |
+| vuetifyOptions | icons         | Refer to Vuetify documentation                                                                                          |                                                                                                                                                                                                                   |         | [Vuetify icon fonts](https://vuetifyjs.com/en/features/icon-fonts/)                                                                                                                    |
 
 ## Development
 

@@ -45,6 +45,8 @@
     "test:watch": "vitest watch"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^6.3.0",
+    "@fortawesome/vue-fontawesome": "^3.0.3",
     "@invictus.codes/nuxt-vuetify": "link:.",
     "@nuxt/kit": "^3.2.0",
     "defu": "^6.1.2",
