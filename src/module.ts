@@ -58,7 +58,7 @@ export default defineNuxtModule<ModuleOptions>({
 
     // Vuetify: add vuetify styles to the nuxtApp css
     // @TODO: this is not SSR friendly (styles are added twice.
-    //        also can't do this in plugin, as rollup then injects the styles?
+    //        also can't do this in plugin with dynamic import (all styles are included).
     if (typeof styles === 'string' && ['sass', 'expose'].includes(styles)) {
       nuxt.options.css.unshift('vuetify/styles/main.sass')
     } else if (styles === true) {
