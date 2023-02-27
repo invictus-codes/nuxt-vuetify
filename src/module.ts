@@ -37,6 +37,7 @@ export default defineNuxtModule<ModuleOptions>({
   setup({
     styles,
     autoImport,
+    useIconCDN,
     ..._options
   }, nuxt) {
     if (!isNuxt3(nuxt)) {
@@ -68,7 +69,7 @@ export default defineNuxtModule<ModuleOptions>({
     }
 
     // Icon CDN's
-    if (options.useIconCDN) {
+    if (useIconCDN) {
       const iconCDNs = new Map()
       iconCDNs.set('fa', 'https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@latest/css/all.min.css')
       iconCDNs.set('mdi', 'https://cdn.jsdelivr.net/npm/@mdi/font@latest/css/materialdesignicons.min.css')
