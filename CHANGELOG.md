@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## v0.2.6
+
+
+### 🚀 Enhancements
+
+  - Example page (66cb917)
+  - Setup action to deploy to GitHub pages (fdcc16a)
+  - Setup action to deploy to GitHub pages (4d373a9)
+
+### ❤️  Contributors
+
+- Jens Van Hellemondt <jens@invictus.codes>
+
 ## v0.2.5
 
 
