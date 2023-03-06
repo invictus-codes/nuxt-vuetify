@@ -60,8 +60,6 @@ jobs:
           cache-dependency-path: pnpm-lock.yaml
       - name: Setup Pages
         uses: actions/configure-pages@v3
-        with:
-          static_site_generator: nuxt
       - name: Restore cache
         uses: actions/cache@v3
         with:
@@ -74,8 +72,10 @@ jobs:
             ${{ runner.os }}-nuxt-build
       - name: Install dependencies
         run: ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
+      - name: Prepack module
+        run: ${{ steps.detect-package-manager.outputs.manager }} run prepack
       - name: Static HTML export with Nuxt
-        run: ${{ steps.detect-package-manager.outputs.manager }} run generate
+        run: ${{ steps.detect-package-manager.outputs.manager }} run dev:generate
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
         with:
