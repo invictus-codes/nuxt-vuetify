@@ -16,6 +16,7 @@ Find and replace all on all files (CMD+SHIFT+F):
 > Add Vuetify 3 to your Nuxt application in seconds.
 
 - [✨ &nbsp;Release Notes](/CHANGELOG.md)
+- [🔍 &nbsp;Playground on GitHub pages](https://invictus-codes.github.io/nuxt-vuetify/)
 
 <!-- - [📖 &nbsp;Documentation](https://example.com) -->
 
