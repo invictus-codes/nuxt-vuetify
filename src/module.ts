@@ -64,7 +64,6 @@ export default defineNuxtModule<ModuleOptions>({
       treeshaking,
     })
     nuxt.options.css ??= []
-    nuxt.options.runtimeConfig.public.vuetify = vuetifyOptions
 
     // Module: Transpile the runtime and vuetify package
     const resolver = createResolver(import.meta.url)
@@ -131,7 +130,10 @@ export default defineNuxtModule<ModuleOptions>({
       ]
     })
 
-    // Do not add the extension since the `.ts` will be transpiled to `.mjs` after `pnpm run prepack`
-    addPlugin(resolver.resolve(runtimeDir, 'plugin'), { append: true })
+    addPluginTemplate({
+      src: resolver.resolve('./runtime/templates/plugin.mts'),
+      filename: 'vuetify.plugin.mjs',
+      options: vuetifyOptions,
+    })
   },
 })
