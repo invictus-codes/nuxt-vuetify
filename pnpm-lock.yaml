@@ -2,7 +2,10 @@ lockfileVersion: 5.4
 
 specifiers:
   '@antfu/eslint-config': ^0.36.0
-  '@fortawesome/fontawesome-svg-core': latest
+  '@fortawesome/fontawesome-svg-core': ^6.3.0
+  '@fortawesome/free-brands-svg-icons': ^6.3.0
+  '@fortawesome/free-regular-svg-icons': ^6.3.0
+  '@fortawesome/free-solid-svg-icons': ^6.3.0
   '@fortawesome/vue-fontawesome': latest-3
   '@invictus.codes/nuxt-vuetify': link:.
   '@nuxt/kit': ^3.2.0
@@ -23,6 +26,9 @@ specifiers:
 
 dependencies:
   '@fortawesome/fontawesome-svg-core': 6.3.0
+  '@fortawesome/free-brands-svg-icons': 6.3.0
+  '@fortawesome/free-regular-svg-icons': 6.3.0
+  '@fortawesome/free-solid-svg-icons': 6.3.0
   '@fortawesome/vue-fontawesome': 3.0.3_o733sqecwwreo43htppogsmk44
   '@invictus.codes/nuxt-vuetify': 'link:'
   '@nuxt/kit': 3.2.0
@@ -862,7 +868,31 @@ packages:
     dev: false
 
   /@fortawesome/fontawesome-svg-core/6.3.0:
-    resolution: {integrity: sha512-uz9YifyKlixV6AcKlOX8WNdtF7l6nakGyLYxYaCa823bEBqyj/U2ssqtctO38itNEwXb8/lMzjdoJ+aaJuOdrw==, tarball: '@fortawesome/fontawesome-svg-core/-/fontawesome-svg-core-6.3.0.tgz'}
+    resolution: {integrity: sha512-uz9YifyKlixV6AcKlOX8WNdtF7l6nakGyLYxYaCa823bEBqyj/U2ssqtctO38itNEwXb8/lMzjdoJ+aaJuOdrw==, tarball: '@fortawesome/fontawesome-svg-core/-/6.3.0/fontawesome-svg-core-6.3.0.tgz'}
+    engines: {node: '>=6'}
+    requiresBuild: true
+    dependencies:
+      '@fortawesome/fontawesome-common-types': 6.3.0
+    dev: false
+
+  /@fortawesome/free-brands-svg-icons/6.3.0:
+    resolution: {integrity: sha512-xI0c+a8xnKItAXCN8rZgCNCJQiVAd2Y7p9e2ND6zN3J3ekneu96qrePieJ7yA7073C1JxxoM3vH1RU7rYsaj8w==, tarball: '@fortawesome/free-brands-svg-icons/-/6.3.0/free-brands-svg-icons-6.3.0.tgz'}
+    engines: {node: '>=6'}
+    requiresBuild: true
+    dependencies:
+      '@fortawesome/fontawesome-common-types': 6.3.0
+    dev: false
+
+  /@fortawesome/free-regular-svg-icons/6.3.0:
+    resolution: {integrity: sha512-cZnwiVHZ51SVzWHOaNCIA+u9wevZjCuAGSvSYpNlm6A4H4Vhwh8481Bf/5rwheIC3fFKlgXxLKaw8Xeroz8Ntg==, tarball: '@fortawesome/free-regular-svg-icons/-/6.3.0/free-regular-svg-icons-6.3.0.tgz'}
+    engines: {node: '>=6'}
+    requiresBuild: true
+    dependencies:
+      '@fortawesome/fontawesome-common-types': 6.3.0
+    dev: false
+
+  /@fortawesome/free-solid-svg-icons/6.3.0:
+    resolution: {integrity: sha512-x5tMwzF2lTH8pyv8yeZRodItP2IVlzzmBuD1M7BjawWgg9XAvktqJJ91Qjgoaf8qJpHQ8FEU9VxRfOkLhh86QA==, tarball: '@fortawesome/free-solid-svg-icons/-/6.3.0/free-solid-svg-icons-6.3.0.tgz'}
     engines: {node: '>=6'}
     requiresBuild: true
     dependencies:
