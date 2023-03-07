@@ -100,7 +100,7 @@ export default defineNuxtModule<ModuleOptions>({
     // @TODO: this should be fixed for SSR purposes
     if (['font-awesome-icon', 'FontAwesomeIcon'].includes(vuetifyOptions.icons?.defaultSet || '')) {
       if (vuetifyOptions.icons?.sets && Object.keys(vuetifyOptions.icons.sets)?.length) {
-        logger.warn('Did not expect sets to be set. Please open an let me know your use case through the nuxt-vuetify issue list => https://github.com/invictus-codes/nuxt-vuetify/issues/new/choose')
+        logger.warn('Did not expect sets to be set. Please let me know your use case through the nuxt-vuetify issue list => https://github.com/invictus-codes/nuxt-vuetify/issues/new/choose')
       }
       //   addComponent({
       //     name: 'FontAwesomeIcon',
