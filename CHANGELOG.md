@@ -2,6 +2,34 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## v0.2.7
+
+[compare changes](https://github.com/invictus-codes/nuxt-vuetify/compare/v0.2.6...v0.2.7)
+
+
+### 🚀 Enhancements
+
+  - Enable auto imports ([4da28d1](https://github.com/invictus-codes/nuxt-vuetify/commit/4da28d1))
+
+### 🩹 Fixes
+
+  - Setup action to also include playground ([b1c093d](https://github.com/invictus-codes/nuxt-vuetify/commit/b1c093d))
+  - Setup action to also include playground ([ad7014f](https://github.com/invictus-codes/nuxt-vuetify/commit/ad7014f))
+  - Remove async await import from plugin ([c9caaa5](https://github.com/invictus-codes/nuxt-vuetify/commit/c9caaa5))
+
+### 💅 Refactors
+
+  - Edit sets-warning when using font-awesome-icon ([2270001](https://github.com/invictus-codes/nuxt-vuetify/commit/2270001))
+  - Install fontawesome free ([34d2913](https://github.com/invictus-codes/nuxt-vuetify/commit/34d2913))
+
+### 🏡 Chore
+
+  - Update deps ([f630eac](https://github.com/invictus-codes/nuxt-vuetify/commit/f630eac))
+
+### ❤️  Contributors
+
+- Jens Van Hellemondt <jens@invictus.codes>
+
 ## v0.2.6
 
 
