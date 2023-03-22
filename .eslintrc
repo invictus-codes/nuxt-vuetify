@@ -17,14 +17,6 @@
     "space-before-function-paren": 0,
     "@typescript-eslint/comma-dangle": 0,
     "no-new": "warn",
-    "indent": [
-      "error",
-      4
-    ],
-    "@typescript-eslint/indent": [
-      "error",
-      4
-    ],
     "no-console": "warn",
     "no-debugger": "error",
     "no-tabs": [
