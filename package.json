@@ -2,7 +2,7 @@
   "name": "@invictus.codes/nuxt-vuetify",
   "description": "Add Vuetify 3 to your Nuxt application in seconds.",
   "private": false,
-  "version": "0.2.7",
+  "version": "0.2.6",
   "license": "MIT",
   "type": "module",
   "sideEffects": false,
@@ -39,7 +39,7 @@
     "dev:generate": "nuxi generate playground",
     "dev:build": "nuxi build playground",
     "dev:prepare": "nuxt-module-build --stub && nuxi prepare playground",
-    "release": "pnpm run lint && pnpm run prepack && changelogen --release && pnpm publish && git push --follow-tags",
+    "release": "pnpm run lint && pnpm run test && pnpm run prepack && changelogen --release && pnpm publish && git push --follow-tags",
     "lint": "eslint ./src --ext .js,.jsx,.ts,.tsx,.vue --ignore-path .gitignore --cache",
     "lint:fix": "eslint ./src --ext .js,.jsx,.ts,.tsx,.vue --ignore-path .gitignore --cache --fix",
     "test": "vitest run",
@@ -47,22 +47,22 @@
   },
   "dependencies": {
     "@invictus.codes/nuxt-vuetify": "link:.",
-    "@nuxt/kit": "^3.2.0",
+    "@nuxt/kit": "^3.3.1",
     "defu": "^6.1.2",
     "vite-plugin-vuetify": "^1.0.2",
-    "vuetify": "^3.1.4"
+    "vuetify": "^3.1.11"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^0.37.0",
-    "@nuxt/module-builder": "latest",
-    "@nuxt/schema": "^3.2.0",
-    "@nuxt/test-utils": "^3.2.0",
+    "@nuxt/module-builder": "0.2.1",
+    "@nuxt/schema": "^3.3.1",
+    "@nuxt/test-utils": "^3.3.1",
     "@nuxtjs/eslint-config-typescript": "^12.0.0",
     "changelogen": "^0.5.1",
-    "eslint": "^8.34.0",
+    "eslint": "^8.36.0",
     "eslint-plugin-nuxt": "^4.0.0",
     "nuxt": "^3.3.1",
-    "sass": "^1.58.0",
+    "sass": "^1.59.3",
     "typescript": "^5.0.2",
     "vitest": "^0.29.7"
   }
