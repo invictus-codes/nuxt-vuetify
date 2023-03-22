@@ -4,6 +4,19 @@ All notable changes to this project will be documented in this file. See [standa
 
 ## v0.2.7
 
+[compare changes](https://github.com/invictus-codes/nuxt-vuetify/compare/v0.2.7...v0.2.7)
+
+
+### 🏡 Chore
+
+  - Update deps ([482198e](https://github.com/invictus-codes/nuxt-vuetify/commit/482198e))
+
+### ❤️  Contributors
+
+- Jens Van Hellemondt <jens@invictus.codes>
+
+## v0.2.7
+
 [compare changes](https://github.com/invictus-codes/nuxt-vuetify/compare/v0.2.6...v0.2.7)
 
 
