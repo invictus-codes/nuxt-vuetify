@@ -1,5 +1,4 @@
 import {
-    addComponent,
     addPluginTemplate,
     createResolver,
     defineNuxtModule,
@@ -71,7 +70,6 @@ export default defineNuxtModule<ModuleOptions>({
             ssr: isSSR,
             treeshaking,
         })
-        nuxt.options.css ??= []
 
         // Module: Transpile the runtime and vuetify package
         const resolver = createResolver(import.meta.url)
@@ -82,11 +80,12 @@ export default defineNuxtModule<ModuleOptions>({
         // Vuetify: add vuetify styles to the nuxtApp css
         // @TODO: this is not SSR friendly (styles are added twice.
         //        also can't do this in plugin with dynamic import (all styles are included).
+        nuxt.options.css ??= []
         if (typeof styles === 'string' && ['sass', 'expose'].includes(styles)) {
             nuxt.options.css.unshift('vuetify/styles/main.sass')
         } else if (styles === true) {
             nuxt.options.css.unshift('vuetify/styles')
-        } else if (!treeshaking && typeof styles === 'object' && styles?.configFile && typeof styles.configFile === 'string') {
+        } else if (isSSR && !treeshaking && typeof styles === 'object' && styles?.configFile && typeof styles.configFile === 'string') {
             nuxt.options.css.unshift(styles.configFile)
         }
 
@@ -101,19 +100,6 @@ export default defineNuxtModule<ModuleOptions>({
                 rel: 'stylesheet',
                 type: 'text/css',
                 href: iconCDNs.get(vuetifyOptions.icons?.defaultSet || 'mdi'),
-            })
-        }
-
-        // If icon.defaultSet is 'FontAwesomeIcon' or 'font-awesome-icon'
-        // @TODO: this should be fixed for SSR purposes
-        if (['font-awesome-icon', 'FontAwesomeIcon'].includes(vuetifyOptions.icons?.defaultSet || '')) {
-            if (vuetifyOptions.icons?.sets && Object.keys(vuetifyOptions.icons.sets)?.length) {
-                logger.warn('Did not expect sets to be set. Please let me know your use case through the nuxt-vuetify issue list => https://github.com/invictus-codes/nuxt-vuetify/issues/new/choose')
-            }
-            addComponent({
-                name: 'FontAwesomeIcon',
-                export: 'FontAwesomeIcon',
-                filePath: '@fortawesome/vue-fontawesome',
             })
         }
 
@@ -139,8 +125,7 @@ export default defineNuxtModule<ModuleOptions>({
         })
 
         addPluginTemplate({
-            src: resolver.resolve('./runtime/templates/plugin.mts'),
-            filename: 'vuetify.plugin.mjs',
+            src: resolver.resolve(runtimeDir, 'templates/plugin.mts'),
             options: vuetifyOptions,
         })
     },

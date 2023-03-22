@@ -13,8 +13,9 @@
               icon="mdi-fire"
             />
             @invictus.codes/nuxt-vuetify by <a href="https://invictus.codes">
-            invictus.codes&nbsp;<v-icon icon="mdi-home" size="12"/>
-            </a>
+            invictus.codes
+            &nbsp;<v-icon icon="mdi-home" size="12" />
+          </a>
           </div>
         </v-sheet>
       </v-col>

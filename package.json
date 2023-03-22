@@ -41,16 +41,11 @@
     "dev:prepare": "nuxt-module-build --stub && nuxi prepare playground",
     "release": "pnpm run lint && pnpm run test && pnpm run prepack && changelogen --release && pnpm publish && git push --follow-tags",
     "lint": "eslint ./src --ext .js,.jsx,.ts,.tsx,.vue --ignore-path .gitignore --cache",
-    "lint:fix": "npm run lint -- --fix",
+    "lint:fix": "pnpm run lint -- --fix",
     "test": "vitest run",
     "test:watch": "vitest watch"
   },
   "dependencies": {
-    "@fortawesome/fontawesome-svg-core": "^6.3.0",
-    "@fortawesome/free-brands-svg-icons": "^6.3.0",
-    "@fortawesome/free-regular-svg-icons": "^6.3.0",
-    "@fortawesome/free-solid-svg-icons": "^6.3.0",
-    "@fortawesome/vue-fontawesome": "latest-3",
     "@invictus.codes/nuxt-vuetify": "link:.",
     "@nuxt/kit": "^3.2.0",
     "defu": "^6.1.2",

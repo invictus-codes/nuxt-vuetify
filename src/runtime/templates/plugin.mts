@@ -2,19 +2,18 @@ import { defineNuxtPlugin } from '#imports';
 import { createVuetify } from 'vuetify'
 
 const isDev = process.env.NODE_ENV === "development"
-const opts = JSON.parse('<%= JSON.stringify(options) %>')
+const options = JSON.parse('<%= JSON.stringify(options) %>')
 
 '<% if (!options.treeshaking) { %>'
 import components from 'vuetify/components'
 import directives from 'vuetify/directives'
 
-opts.components = components
-opts.directives = directives
+options.components = components
+options.directives = directives
 '<% } %>'
 
 export default defineNuxtPlugin(nuxtApp => {
-  const vuetify = createVuetify(opts)
-
+  const vuetify = createVuetify(options)
   nuxtApp.vueApp.use(vuetify)
 
   if (!process.server && isDev) {
