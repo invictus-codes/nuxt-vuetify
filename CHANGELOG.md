@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## v0.2.18
+
+[compare changes](https://github.com/invictus-codes/nuxt-vuetify/compare/v0.2.17...v0.2.18)
+
+
+### 🚀 Enhancements
+
+  - Fix components/directives import ([2c55fa8](https://github.com/invictus-codes/nuxt-vuetify/commit/2c55fa8))
+
+### ❤️  Contributors
+
+- Jens Van Hellemondt <jens@invictus.codes>
+
 ## v0.2.17
 
 [compare changes](https://github.com/invictus-codes/nuxt-vuetify/compare/v0.2.16...v0.2.17)
