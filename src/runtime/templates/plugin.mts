@@ -1,12 +1,12 @@
-import { defineNuxtPlugin } from '#imports';
+import { defineNuxtPlugin } from '#app'
 import { createVuetify } from 'vuetify'
 
 const isDev = process.env.NODE_ENV === "development"
 const options = JSON.parse('<%= JSON.stringify(options) %>')
 
 '<% if (!options.treeshaking) { %>'
-import components from 'vuetify/components'
-import directives from 'vuetify/directives'
+import * as components from 'vuetify/components'
+import * as directives from 'vuetify/directives'
 
 options.components = components
 options.directives = directives
