@@ -2,6 +2,10 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## v0.2.12
+
+[compare changes](https://github.com/invictus-codes/nuxt-vuetify/compare/v0.2.11...v0.2.12)
+
 ## v0.2.11
 
 [compare changes](https://github.com/invictus-codes/nuxt-vuetify/compare/v0.2.10...v0.2.11)
