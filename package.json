@@ -52,7 +52,7 @@
     "test:watch": "vitest watch"
   },
   "dependencies": {
-    "@invictus.codes/nuxt-vuetify": "link:.",
+    "@invictus.codes/nuxt-vuetify": "file:.",
     "@nuxt/kit": "^3.3.2",
     "defu": "^6.1.2",
     "vite-plugin-vuetify": "^1.0.2",
