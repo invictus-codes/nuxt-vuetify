@@ -2,6 +2,23 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## v0.2.19
+
+[compare changes](https://github.com/invictus-codes/nuxt-vuetify/compare/v0.2.18...v0.2.19)
+
+
+### 🩹 Fixes
+
+  - Use module in devDependency to allow installation via npm ([2cfc552](https://github.com/invictus-codes/nuxt-vuetify/commit/2cfc552))
+
+### 📖 Documentation
+
+  - Add login command for changelogen ([441fc11](https://github.com/invictus-codes/nuxt-vuetify/commit/441fc11))
+
+### ❤️  Contributors
+
+- Jens Van Hellemondt <jens@invictus.codes>
+
 ## v0.2.18
 
 [compare changes](https://github.com/invictus-codes/nuxt-vuetify/compare/v0.2.17...v0.2.18)
