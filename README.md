@@ -84,6 +84,8 @@ That's it! You can now use Nuxt Vuetify in your Nuxt app ✨
 
 ## Development
 
+Make sure to be logged in with `gh auth login`, otherwise changelogen won't work. 
+
 ```bash
 # Install dependencies
 npm install
