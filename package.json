@@ -2,7 +2,7 @@
   "name": "@invictus.codes/nuxt-vuetify",
   "description": "Add Vuetify 3 to your Nuxt application in seconds.",
   "private": false,
-  "version": "0.2.19",
+  "version": "0.2.20",
   "license": "MIT",
   "type": "module",
   "sideEffects": false,
@@ -17,8 +17,10 @@
   },
   "packageManager": "pnpm@8.1.0",
   "engines": {
-    "node": ">=18.0.0",
-    "pnpm": ">=8.1.0"
+    "node": ">=16.0.0",
+    "pnpm": ">=7.0.0",
+    "npm": ">=8.0.0",
+    "yarn": ">=1.0.0"
   },
   "publishConfig": {
     "registry": "https://registry.npmjs.org/",
