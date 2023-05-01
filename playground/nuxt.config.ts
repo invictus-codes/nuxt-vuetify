@@ -1,13 +1,17 @@
 export default defineNuxtConfig({
+  ssr: false,
   modules: ['@invictus.codes/nuxt-vuetify'],
-  app: {
-    baseURL: process.env.BASE_URL || '/',
-  },
-  ssr: true,
+  css: ['@fortawesome/fontawesome-svg-core/styles.css'],
   vuetify: {
     moduleOptions: {
       treeshaking: true,
-      useIconCDN: true,
+      useIconCDN: false,
+      autoImport: true,
     },
-  }
+    vuetifyOptions: {
+      test() {
+        console.log('hi')
+      }
+    }
+  },
 })

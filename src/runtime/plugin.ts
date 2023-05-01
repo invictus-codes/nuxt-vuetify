@@ -1,22 +1,15 @@
 import { defineNuxtPlugin } from '#app'
-import { h } from 'vue'
+// import { h } from 'vue'
 import { createVuetify } from 'vuetify'
 
 const isDev = process.env.NODE_ENV === 'development'
-const options = JSON.parse('<%= JSON.stringify(options) %>')
-
-'<% if (!options.treeshaking) { %>'
-import * as components from 'vuetify/components'
-import * as directives from 'vuetify/directives'
-
-options.components = components
-options.directives = directives
-'<% } %>'
 
 export default defineNuxtPlugin(nuxtApp => {
+  const config = useRuntimeConfig()
+  const options = config.public.vuetify
   console.log({
     ...options,
-    test: () => h('div', { innerHTML: 'hi' }),
+    // test: () => h('div', { innerHTML: 'hi' }),
   })
   const vuetify = createVuetify(options)
   nuxtApp.vueApp.use(vuetify)

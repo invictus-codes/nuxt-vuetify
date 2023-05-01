@@ -1,13 +1,7 @@
-import {
-  addPluginTemplate,
-  createResolver,
-  defineNuxtModule,
-  getNuxtVersion,
-  isNuxt3,
-  useLogger,
-} from '@nuxt/kit'
+import { addPlugin, createResolver, defineNuxtModule, getNuxtVersion, isNuxt3, useLogger, } from '@nuxt/kit'
 import defu from 'defu'
 import vuetify from 'vite-plugin-vuetify'
+import { h } from 'vue'
 import type { VuetifyOptions } from 'vuetify'
 import { name, version } from '../package.json'
 
@@ -51,7 +45,7 @@ export default defineNuxtModule<ModuleOptions>({
   },
   setup({
     moduleOptions,
-        vuetifyOptions: _vuetifyOptions,
+    vuetifyOptions: _vuetifyOptions,
   }, nuxt) {
     if (!isNuxt3(nuxt)) {
       logger.error(`Cannot support nuxt version: ${getNuxtVersion(nuxt)}`)
@@ -124,9 +118,19 @@ export default defineNuxtModule<ModuleOptions>({
       ]
     })
 
-    addPluginTemplate({
-      src: resolver.resolve(runtimeDir, 'templates/plugin.mts'),
-      options: vuetifyOptions,
+    nuxt.options.runtimeConfig.public.vuetify = defu(nuxt.options.runtimeConfig.public.vuetify, {
+      ...vuetifyOptions,
+      test: () => h('div', { innerHTML: 'hi' }),
     })
-  },
+    addPlugin(resolver.resolve(runtimeDir, 'plugin.ts'))
+
+    // addPluginTemplate({
+    //   src: resolver.resolve(runtimeDir, 'templates/plugin.mts'),
+    //   options: {
+    //     ...vuetifyOptions,
+    //     ssr: isSSR,
+    //     treeshaking,
+    //   }
+    // })
+  }
 })
