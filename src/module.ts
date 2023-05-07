@@ -21,6 +21,7 @@ export interface ModuleOptions {
     useIconCDN?: boolean
     treeshaking?: boolean
     autoImport?: boolean
+    importLabComponents?: boolean
     styles?: true | 'none' | 'expose' | 'sass' | {
       configFile: string
     }
@@ -35,6 +36,7 @@ export default defineNuxtModule<ModuleOptions>({
       // Nuxt-Vuetify module
       useIconCDN: true,
       treeshaking: false,
+      importLabComponents: false,
       // Vite-plugin-vuetify
       styles: true,
       autoImport: true,
@@ -69,6 +71,7 @@ export default defineNuxtModule<ModuleOptions>({
     const vuetifyOptions = <TVuetifyOptions>defu(_vuetifyOptions, {
       ssr: isSSR,
       treeshaking,
+      importLabComponents: moduleOptions.importLabComponents
     })
 
     // Module: Transpile the runtime and vuetify package
