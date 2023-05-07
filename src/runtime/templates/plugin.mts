@@ -8,7 +8,13 @@ const options = JSON.parse('<%= JSON.stringify(options) %>')
 import * as components from 'vuetify/components'
 import * as directives from 'vuetify/directives'
 
-options.components = components
+  '<% if (options.importLabComponents) { %>'
+    import * as labs from 'vuetify/labs/components'
+    options.components = {...components,...labs}
+  '<% } else { %>'
+    options.components = components
+  '<% } %>'
+
 options.directives = directives
 '<% } %>'
 
