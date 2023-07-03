@@ -2,6 +2,25 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## v0.2.22
+
+[compare changes](https://github.com/invictus-codes/nuxt-vuetify/compare/v0.2.20...v0.2.22)
+
+
+### 📖 Documentation
+
+  - Add unsupported features ([4e63201](https://github.com/invictus-codes/nuxt-vuetify/commit/4e63201))
+
+### 🏡 Chore
+
+  - **release:** V0.2.20 ([04b2f2a](https://github.com/invictus-codes/nuxt-vuetify/commit/04b2f2a))
+  - Update deps ([cea4bc2](https://github.com/invictus-codes/nuxt-vuetify/commit/cea4bc2))
+
+### ❤️  Contributors
+
+- Jens <jens@invictus.codes>
+- Jens Van Hellemondt <jens@invictus.codes>
+
 ## v0.2.20
 
 [compare changes](https://github.com/invictus-codes/nuxt-vuetify/compare/v0.2.19...v0.2.20)
