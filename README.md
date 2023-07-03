@@ -29,6 +29,12 @@ Find and replace all on all files (CMD+SHIFT+F):
 - 📊 &nbsp;Automatic Nuxt SSR detection
 - ⚙️ &nbsp;Vuetify styles configurable (precompiled css by default)
 
+## Features not yet supported
+
+- [Material Design Blueprints](https://vuetifyjs.com/en/features/blueprints/)
+- [Icon fonts](https://vuetifyjs.com/en/features/icon-fonts/)
+
+
 ## Quick Setup
 
 1. Add `@invictus.codes/nuxt-vuetify` dependency to your project
