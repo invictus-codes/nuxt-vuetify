@@ -17,6 +17,7 @@
             &nbsp;<v-icon icon="mdi-home" size="12" />
           </a>
           </div>
+          <div><v-date-picker /></div>
         </v-sheet>
       </v-col>
     </v-row>

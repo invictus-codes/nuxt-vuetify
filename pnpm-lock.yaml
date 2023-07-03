@@ -23,8 +23,8 @@ devDependencies:
     specifier: ^0.39.6
     version: 0.39.6(eslint@8.44.0)(typescript@5.1.6)
   '@invictus.codes/nuxt-vuetify':
-    specifier: ^0.2.20
-    version: 0.2.20(rollup@3.26.0)(typescript@5.1.6)(vite@4.3.9)(vue@3.3.4)
+    specifier: ^0.2.23
+    version: 0.2.23(rollup@3.26.0)(typescript@5.1.6)(vite@4.3.9)(vue@3.3.4)
   '@nuxt/module-builder':
     specifier: 0.4.0
     version: 0.4.0(@nuxt/kit@3.6.1)(nuxi@3.6.1)(sass@1.63.6)
@@ -886,8 +886,8 @@ packages:
     resolution: {integrity: sha512-ZnQMnLV4e7hDlUvw8H+U8ASL02SS2Gn6+9Ac3wGGLIe7+je2AeAOxPY+izIPJDfFDb7eDjev0Us8MO1iFRN8hA==}
     dev: true
 
-  /@invictus.codes/nuxt-vuetify@0.2.20(rollup@3.26.0)(typescript@5.1.6)(vite@4.3.9)(vue@3.3.4):
-    resolution: {integrity: sha512-Q6c/aWfuK0cntG6cQo4FkbXNsI63D4O80v0MOtxKLap98P8cWFKrznycbGHrHkeeqADWehZii94XjmDhrT8Fkw==}
+  /@invictus.codes/nuxt-vuetify@0.2.23(rollup@3.26.0)(typescript@5.1.6)(vite@4.3.9)(vue@3.3.4):
+    resolution: {integrity: sha512-w3R60jCaRGri8bk7AFR7Y9xv2Omki4xJHrbJyeRktN/u0yqxNtaiueE79iQ+48T8W6zSrKY5JP90e8I6YoLOJA==}
     engines: {node: '>=16.0.0', npm: '>=8.0.0', pnpm: '>=7.0.0', yarn: '>=1.0.0'}
     dependencies:
       '@nuxt/kit': 3.6.1(rollup@3.26.0)
@@ -3033,7 +3033,7 @@ packages:
     dependencies:
       debug: 3.2.7
       is-core-module: 2.12.1
-      resolve: 1.22.3
+      resolve: 1.22.2
     transitivePeerDependencies:
       - supports-color
     dev: true
