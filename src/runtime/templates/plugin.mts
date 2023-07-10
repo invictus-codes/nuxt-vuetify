@@ -8,14 +8,13 @@ const options = JSON.parse('<%= JSON.stringify(options) %>')
 import * as components from 'vuetify/components'
 import * as directives from 'vuetify/directives'
 
-  '<% if (options.importLabComponents) { %>'
-    import * as labs from 'vuetify/labs/components'
-    options.components = {...components,...labs}
-  '<% } else { %>'
-    options.components = components
-  '<% } %>'
-
+options.components = components
 options.directives = directives
+
+  '<% if (options.useVuetifyLabs) { %>'
+    import * as labs from 'vuetify/labs/components'
+    options.components = { ...options.components, ...labs}
+  '<% } %>'
 '<% } %>'
 
 export default defineNuxtPlugin(nuxtApp => {
