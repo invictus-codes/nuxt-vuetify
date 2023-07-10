@@ -1,5 +1,5 @@
 export default defineNuxtConfig({
-  modules: ['@invictus.codes/nuxt-vuetify'],
+  modules: ['../src/module'],
   app: {
     baseURL: process.env.BASE_URL || '/',
   },
