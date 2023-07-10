@@ -53,7 +53,7 @@ export default defineNuxtModule<ModuleOptions>({
   },
   setup({
     moduleOptions,
-        vuetifyOptions: _vuetifyOptions,
+    vuetifyOptions: _vuetifyOptions,
   }, nuxt) {
     if (!isNuxt3(nuxt)) {
       logger.error(`Cannot support nuxt version: ${getNuxtVersion(nuxt)}`)
@@ -93,8 +93,10 @@ export default defineNuxtModule<ModuleOptions>({
       nuxt.options.css.unshift('vuetify/styles/main.sass')
     } else if (styles === true) {
       nuxt.options.css.unshift('vuetify/styles')
-    } else if (isSSR && !treeshaking && typeof styles === 'object' && styles?.configFile && typeof styles.configFile === 'string') {
-      nuxt.options.css.unshift(styles.configFile)
+    } else if (typeof styles === 'object') {
+      if (styles?.configFile && typeof styles.configFile === 'string') {
+        nuxt.options.css.unshift(styles.configFile)
+      }
     }
 
     // Icon CDN's
