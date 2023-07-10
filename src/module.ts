@@ -75,6 +75,10 @@ export default defineNuxtModule<ModuleOptions>({
       useVuetifyLabs
     })
 
+    if (typeof styles === 'object' && useVuetifyLabs) {
+      logger.warn('Custom styles config and Vuetify Labs is currently not supported.')
+    }
+
     // Module: Transpile the runtime and vuetify package
     const resolver = createResolver(import.meta.url)
     const runtimeDir = resolver.resolve('./runtime')
