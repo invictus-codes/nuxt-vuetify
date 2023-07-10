@@ -6,9 +6,10 @@ export default defineNuxtConfig({
   ssr: true,
   vuetify: {
     moduleOptions: {
-      treeshaking: false,
+      styles: { configFile: '/main.scss' },
+      treeshaking: true,
       useIconCDN: true,
-      importLabComponents: true
+      useVuetifyLabs: true
     },
   }
 })
