@@ -2,6 +2,33 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## v0.3.0
+
+[compare changes](https://github.com/invictus-codes/nuxt-vuetify/compare/v0.2.23...v0.3.0)
+
+### 🚀 Enhancements
+
+- Add a warning that Custom styles config and Vuetify Labs is not supported ([9449c4b](https://github.com/invictus-codes/nuxt-vuetify/commit/9449c4b))
+- Remove SSR/treeshaking dependency from custom styles ([219d2af](https://github.com/invictus-codes/nuxt-vuetify/commit/219d2af))
+- Release with specific semver version bump ([90cb3e9](https://github.com/invictus-codes/nuxt-vuetify/commit/90cb3e9))
+
+### 💅 Refactors
+
+- Rename importLabComponents to useVuetifyLabs to be more Vue-ish ([5195420](https://github.com/invictus-codes/nuxt-vuetify/commit/5195420))
+
+### 🏡 Chore
+
+- Test out vuetify labs ([a915b6f](https://github.com/invictus-codes/nuxt-vuetify/commit/a915b6f))
+- Update deps and move module dep to playground' nuxt-config ([45c758b](https://github.com/invictus-codes/nuxt-vuetify/commit/45c758b))
+
+### ✅ Tests
+
+- **playground:** Test with configFile ([75929f1](https://github.com/invictus-codes/nuxt-vuetify/commit/75929f1))
+
+### ❤️  Contributors
+
+- Jens <jens@invictus.codes>
+
 ## v0.2.23
 
 [compare changes](https://github.com/invictus-codes/nuxt-vuetify/compare/v0.2.20...v0.2.23)
