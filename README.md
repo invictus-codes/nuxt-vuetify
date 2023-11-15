@@ -72,7 +72,7 @@ export default defineNuxtConfig({
       /* vite-plugin-vuetify options */
       styles: true | 'none' | 'expose' | 'sass' | { configFile: string },
       autoImport: true | false,
-      useVuetifyLabs: true | false, 
+      useVuetifyLabs: true | false,
     }
   }
 })
