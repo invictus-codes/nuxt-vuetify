@@ -9,6 +9,14 @@ Find and replace all on all files (CMD+SHIFT+F):
 
 # Nuxt Vuetify
 
+## No Longer Maintained. 
+
+Please refer to the official installation instructions provided by Vuetify using Nuxt or an alternative Nuxt Module.
+
+https://vuetifyjs.com/en/getting-started/installation/#using-nuxt-3
+
+---
+
 [![npm version][npm-version-src]][npm-version-href]
 [![npm downloads][npm-downloads-src]][npm-downloads-href]
 [![License][license-src]][license-href]
