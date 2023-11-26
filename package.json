@@ -2,7 +2,7 @@
   "name": "@invictus.codes/nuxt-vuetify",
   "description": "Add Vuetify 3 to your Nuxt application in seconds.",
   "private": false,
-  "version": "0.3.0",
+  "version": "0.3.4",
   "license": "MIT",
   "type": "module",
   "sideEffects": false,
@@ -62,7 +62,7 @@
     "@nuxt/kit": "^3.6.2",
     "defu": "^6.1.2",
     "vite-plugin-vuetify": "^1.0.2",
-    "vuetify": "^3.3.7"
+    "vuetify": "^3.4.1"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^0.39.7",
